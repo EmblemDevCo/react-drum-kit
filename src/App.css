@@ -39,3 +39,10 @@
   color: rgba(255, 255, 255, 0.3);
   font-size: 60px;
 }
+
+.drum-pad-row {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  margin: 0 auto;
+}
