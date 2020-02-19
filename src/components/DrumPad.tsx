@@ -12,14 +12,10 @@ const DrumPad = ({ sound, keyboard, activeKey }: DrumPadProps) => {
   const [isActive, setIsActive] = useState();
 
   useEffect(() => {
-    setAudio(new Audio(sound));
     if (audio) {
-      audio.addEventListener('ended', () => {
-        audio.remove();
-        setAudio(new Audio(sound));
-      });
       if (activeKey === keyboard) {
         setIsActive(true);
+        audio.currentTime = 0;
         audio.play();
       } else {
         setIsActive(false);
@@ -27,14 +23,15 @@ const DrumPad = ({ sound, keyboard, activeKey }: DrumPadProps) => {
     }
   }, [activeKey]);
 
-  const start = () => audio.play();
-  const stop = () => setAudio(new Audio(sound));
+  const start = () => {
+    audio.currentTime = 0;
+    audio.play();
+  };
 
   return (
     <div
       className={classNames('drum-pad', { active: isActive })}
       onMouseDown={start}
-      onMouseUp={stop}
     >
       <span>{keyboard}</span>
       <p></p>
