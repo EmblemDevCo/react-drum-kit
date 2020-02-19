@@ -1,0 +1,27 @@
+.drum-pad {
+  height: 200px;
+  width: 150px;
+  background-color: rgb(30, 30, 30);
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  border: outset 2px gray;
+}
+
+.drum-pad:active {
+  border: inset 2px gray;
+}
+
+.drum-pad:active > p {
+  background-color: rgba(46, 73, 189, 1);
+  transition: background-color 0.1s ease-in-out;
+}
+
+.drum-pad p {
+  width: 80%;
+  margin: 0 auto;
+  height: 10px;
+  background-color: rgba(46, 73, 189, 0.3);
+}
