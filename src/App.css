@@ -6,16 +6,25 @@
   padding: 15px;
   flex-direction: column;
   box-sizing: border-box;
-  justify-content: flex-end;
+  justify-content: space-between;
   border: outset 2px gray;
+  align-items: center;
 }
 
-.drum-pad:active {
+.drum-pad:active,
+.drum-pad.active {
   border: inset 2px gray;
 }
 
-.drum-pad:active > p {
+.drum-pad:active > p,
+.drum-pad.active > p {
   background-color: rgba(46, 73, 189, 1);
+  transition: background-color 0.1s ease-in-out;
+}
+
+.drum-pad:active > span,
+.drum-pad.active > span {
+  color: rgba(255, 255, 255, 1);
   transition: background-color 0.1s ease-in-out;
 }
 
@@ -24,4 +33,9 @@
   margin: 0 auto;
   height: 10px;
   background-color: rgba(46, 73, 189, 0.3);
+}
+
+.drum-pad span {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 60px;
 }
