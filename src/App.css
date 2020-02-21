@@ -1,3 +1,11 @@
+.App {
+  text-align: center;
+}
+
+.App h1 {
+  font-size: 5rem;
+}
+
 .drum-pad {
   height: 200px;
   width: 150px;
@@ -44,5 +52,5 @@
   display: flex;
   justify-content: space-around;
   width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
 }

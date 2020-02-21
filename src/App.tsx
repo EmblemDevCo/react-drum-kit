@@ -37,9 +37,12 @@ function App() {
   ];
   return (
     <div className="App">
-      <DrumPadRow drumPadData={row1} />
-      <DrumPadRow drumPadData={row2} />
-      <DrumPadRow drumPadData={row3} />
+      <h1>React Drum Kit</h1>
+      <section>
+        <DrumPadRow drumPadData={row1} />
+        <DrumPadRow drumPadData={row2} />
+        <DrumPadRow drumPadData={row3} />
+      </section>
     </div>
   );
 }
